@@ -2,9 +2,9 @@ const dropMenu = document.querySelectorAll(".drop-down-menu");
 dropMenu.forEach((menu) => {
   const selected = menu.querySelector(".selected");
   const menuList = menu.querySelector(".menu-list");
+  const icon = selected.querySelector(".selected-icon");
   selected.addEventListener("click", function (e) {
     e.preventDefault();
-    const icon = selected.querySelector(".selected-icon");
     if (menuList.style.visibility != "visible") {
       menuList.style.visibility = "visible";
       menuList.classList.add("animated");
@@ -21,6 +21,9 @@ dropMenu.forEach((menu) => {
     option.addEventListener("click", function (e) {
       e.stopPropagation();
       menu.querySelector(".selected-text").textContent = option.textContent;
+      menuList.style.visibility = "hidden";
+      menuList.classList.remove("animated");
+      icon.style.transform = "rotate(0)";
     });
   });
 });
