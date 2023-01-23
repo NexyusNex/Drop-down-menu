@@ -9,11 +9,11 @@ function MenuFunctionality() {
       if (menuList.style.visibility != "visible") {
         menuList.style.visibility = "visible";
         menuList.classList.add("animated");
-        icon.style.transform = "rotate(180deg)";
+        icon.style.transform = "rotate(0)";
       } else {
         menuList.style.visibility = "hidden";
         menuList.classList.remove("animated");
-        icon.style.transform = "rotate(0)";
+        icon.style.transform = "rotate(180deg)";
       }
     });
 
