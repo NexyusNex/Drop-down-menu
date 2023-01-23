@@ -56,18 +56,17 @@ body {
   z-index: 1;
   list-style: none;
   visibility: hidden;
-  display: none;
+  display: flex;
   flex-direction: column;
   padding: 8px;
   gap: 4px;
-  max-height: 0;
+  max-height: 0px;
   transition: max-height 300ms ease-out;
+  overflow: auto;
 }
 
 .menu-list.animated {
   max-height: 500px;
-  overflow: auto;
-  overflow-x: hidden;
 }
 
 .menu-list li {
