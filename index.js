@@ -7,6 +7,7 @@ function MenuFunctionality() {
     selected.addEventListener("click", function (e) {
       e.preventDefault();
       if (menuList.style.visibility != "visible") {
+        menuList.style.display = "flex";
         menuList.style.visibility = "visible";
         menuList.classList.add("animated");
         icon.style.transform = "rotate(180deg)";
