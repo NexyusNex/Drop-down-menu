@@ -12,6 +12,7 @@ body {
   background-color: #0f172a;
   font-family: roboto;
   padding: 20px;
+  color: white;
 }
 
 .selected,
@@ -21,11 +22,12 @@ body {
   background-color: #1e293b;
   border-radius: 8px;
   color: #f1f5f9;
-  display: flex;
   box-shadow: 0px 0px 8px #1e293b;
 }
 
 .selected {
+  position: relative;
+  display: flex;
   align-items: center;
   height: 45px;
   padding: 0 12px;
@@ -33,6 +35,7 @@ body {
   transition: outline 300ms ease;
   transition: box-shadow 300ms ease;
   justify-content: space-between;
+  user-select: none;
 }
 
 .selected:hover {
@@ -42,7 +45,7 @@ body {
   cursor: pointer;
 }
 
-.selected:hover img {
+.selected.animated img {
   transform: rotate(180deg);
 }
 
@@ -53,10 +56,19 @@ body {
 }
 
 .menu-list {
+  position: absolute;
   list-style: none;
+  visibility: hidden;
+  display: flex;
   flex-direction: column;
   padding: 8px;
   gap: 4px;
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.menu-list.animated {
+  opacity: 1;
 }
 
 .menu-list li {
