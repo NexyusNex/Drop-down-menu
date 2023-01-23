@@ -45,10 +45,6 @@ body {
   cursor: pointer;
 }
 
-.selected.animated img {
-  transform: rotate(180deg);
-}
-
 .selected img {
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(271deg)
     brightness(109%) contrast(100%);
@@ -57,6 +53,7 @@ body {
 
 .menu-list {
   position: absolute;
+  z-index: 1;
   list-style: none;
   visibility: hidden;
   display: flex;
