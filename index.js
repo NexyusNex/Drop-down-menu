@@ -24,7 +24,7 @@ function MenuFunctionality() {
         menu.querySelector(".selected-text").textContent = option.textContent;
         menuList.style.visibility = "hidden";
         menuList.classList.remove("animated");
-        icon.style.transform = "rotate(0)";
+        icon.style.transform = "rotate(180deg)";
       });
     });
   });
